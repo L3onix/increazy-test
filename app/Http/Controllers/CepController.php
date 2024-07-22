@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\CepResource;
-use App\Http\Resources\CepResourceCollection;
 use App\Models\Cep;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -20,7 +19,6 @@ class CepController extends Controller
             }
         }
         $ceps = collect($ceps);
-        // dd($ceps);
         return CepResource::collection($ceps);
     }
 
